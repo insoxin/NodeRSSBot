@@ -25,7 +25,7 @@ export const config: Config = {
     view_all: !!process.env.RSSBOT_VIEW_ALL || false,
     UA:
         process.env.RSSBOT_UA ||
-        `Mozilla/5.0  INSObot v${version}(https://t.me/Hu60_Bot)`,
+        `Mozilla/5.0  INSObot v${version}(https://t.me/toutiaonewsbot)`,
     not_send: !!process.env.NOT_SEND || false, // just for debug use
     concurrency: parseInt(process.env.RSSBOT_CONCURRENCY) || 200,
     delete_on_err_send: !!process.env.DELETE_ON_ERR_SEND || true, // block and chat not found
