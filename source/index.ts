@@ -63,14 +63,12 @@ bot.command('start', sendError, async (ctx: MContext) => {
     const builder = [];
     const { lang } = ctx.state;
     builder.push(i18n[lang]['WELCOME']);
-    builder.push(i18n[lang]['SUB_USAGE']);
-    builder.push(i18n[lang]['UNSUB_USAGE']);
-    builder.push(i18n[lang]['RSS_USAGE']);
-    builder.push(i18n[lang]['SEND_FILE_IMPORT']);
-    builder.push(i18n[lang]['EXPORT']);
-    builder.push(i18n[lang]['USB_ALL_USAGE']);
-    builder.push(i18n[lang]['LANG_USAGE']);
-    if (view_all) builder.push(i18n[lang]['VIEW_ALL_USAGE']);
+    builder.push(
+        `/start 启动机器人`
+    );
+    builder.push(
+        `/help 更多指令文档。`
+    );
     await ctx.replyWithMarkdown(builder.join('\n'));
 });
 
@@ -86,7 +84,10 @@ bot.command('help', sendError, async (ctx: MContext) => {
     builder.push(i18n[lang]['LANG_USAGE']);
     if (view_all) builder.push(i18n[lang]['VIEW_ALL_USAGE']);
     builder.push(
-        `[https://github.com/fengkx/NodeRSSBot/blob/master/README.md](https://github.com/fengkx/NodeRSSBot/blob/master/README.md)`
+        `/heath 显示所有正常的订阅和错误订阅统计`
+    );
+    builder.push(
+        `🔊:新的帖子(每五分钟)很快就会发布，请保持联系!辅助机器人@TOUTIAO\\_BOT，可以帮助你更多。`
     );
     await ctx.replyWithMarkdown(builder.join('\n'));
 });
