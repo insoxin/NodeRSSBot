@@ -5,7 +5,7 @@ import { I18n, I18nLang } from './types/i18n';
 
 const result: I18n = {};
 const localeDir = path.join(__dirname, '../i18n'); // /dist/source/i18n -> /dist/[i18n]
-const baseStr = fs.readFileSync(path.join(localeDir, 'en.yaml'), {
+const baseStr = fs.readFileSync(path.join(localeDir, 'zh-cn.yaml'), {
     encoding: 'utf8'
 });
 
